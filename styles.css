@@ -1,110 +1,111 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+/* ================================
+   BASE RESET
+================================ */
 * {
   box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Inter, Helvetica, Arial, sans-serif;
-  background: radial-gradient(
-      ellipse at top left,
-      rgba(255, 255, 255, 0.06),
-      transparent 40%
-    ),
-    #05070c;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top left, #0b1220, #020409);
   color: #eaeaea;
   line-height: 1.6;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+/* ================================
+   CONTAINER (GLOBAL WRAPPER)
+================================ */
 .container {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 32px 24px;
 }
 
-/* =========================
+/* ================================
    NAVIGATION
-========================= */
+================================ */
 nav.container {
   display: flex;
-  gap: 28px;
-  padding: 28px 0 40px;
+  gap: 24px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
-nav.container a {
-  color: #eaeaea;
+nav a {
+  color: #cfd8ff;
   text-decoration: none;
-  font-size: 15px;
-  opacity: 0.9;
+  font-size: 14px;
 }
 
-nav.container a:hover {
-  opacity: 1;
+nav a:hover {
   text-decoration: underline;
 }
 
-/* =========================
-   SECTIONS
-========================= */
+/* ================================
+   SECTION RHYTHM (CRITICAL FIX)
+================================ */
 .section {
-  margin-bottom: 56px;
+  margin-top: 56px;
 }
 
+.section:first-child {
+  margin-top: 0;
+}
+
+/* ================================
+   HEADINGS
+================================ */
 h1 {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size: 40px;
+  margin: 0 0 12px;
 }
 
 h2 {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 18px;
+  font-size: 26px;
+  margin: 0 0 20px;
 }
 
 p {
-  max-width: 620px;
-  font-size: 15px;
-  color: #cfcfcf;
-  margin-bottom: 16px;
+  max-width: 680px;
+  margin: 0 0 16px;
+  color: #c7c7c7;
 }
 
-/* =========================
-   HERO LAYOUT (HOME)
-========================= */
+/* ================================
+   HERO IMAGE
+================================ */
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr 360px;
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero img {
   width: 100%;
   max-width: 360px;
   border-radius: 18px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
 
-/* =========================
-   GRID
-========================= */
+/* ================================
+   GRID (CARDS)
+================================ */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
+  margin-top: 24px;
 }
 
-/* =========================
-   CARDS
-========================= */
+/* ================================
+   CARD (CENTERED FIX)
+================================ */
 .card {
   display: flex;
   align-items: center;
@@ -123,26 +124,13 @@ p {
   color: #eaeaea;
 }
 
-/* =========================
-   FOOTER
-========================= */
-.footer {
+/* ================================
+   FOOTER (FIXES FLOATING FOOTER)
+================================ */
+footer {
+  margin-top: 72px;
+  padding: 32px 0;
   text-align: center;
   font-size: 13px;
-  color: #8a8a8a;
-  padding: 40px 0 28px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
+  color: #9aa0b4;
 }
