@@ -1,6 +1,6 @@
-/* =========================
-   GLOBAL RESET
-========================= */
+/* ================================
+   BASE RESET
+================================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,141 +8,133 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Inter, Helvetica, Arial, sans-serif;
-  background: radial-gradient(
-      ellipse at top left,
-      rgba(255, 255, 255, 0.06),
-      transparent 40%
-    ),
-    #05070c;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b1220 0%, #05070d 60%);
   color: #eaeaea;
-  line-height: 1.6;
 }
 
-/* =========================
-   CONTAINER
-========================= */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
+/* ================================
+   NAVIGATION (GLOBAL)
+================================ */
 nav.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
   display: flex;
-  gap: 28px;
-  padding: 28px 0 40px;
+  gap: 22px;
 }
 
 nav.container a {
-  color: #eaeaea;
+  color: #cfd6e3;
   text-decoration: none;
-  font-size: 15px;
-  opacity: 0.9;
+  font-size: 14px;
 }
 
 nav.container a:hover {
-  opacity: 1;
-  text-decoration: underline;
+  color: #ffffff;
 }
 
-/* =========================
-   SECTIONS
-========================= */
-.section {
-  margin-bottom: 56px;
-}
-
-h1 {
-  font-size: 36px;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-h2 {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 18px;
-}
-
-p {
-  max-width: 620px;
-  font-size: 15px;
-  color: #cfcfcf;
-  margin-bottom: 16px;
-}
-
-/* =========================
-   HERO LAYOUT (HOME)
-========================= */
+/* ================================
+   HOME PAGE (UNCHANGED)
+================================ */
 .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px 40px;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
+}
+
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+.hero h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #b8c0cf;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #b9c2cf;
+  margin-bottom: 14px;
 }
 
 .hero img {
   width: 100%;
   max-width: 360px;
-  border-radius: 18px;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
 }
 
-/* =========================
-   GRID
-========================= */
+/* ================================
+   GRID + CARD (REUSABLE)
+================================ */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
 
-/* =========================
-   CARDS
-========================= */
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 24px 28px;
   min-height: 96px;
-
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
-
   font-size: 15px;
   line-height: 1.45;
   text-align: center;
   color: #eaeaea;
 }
 
-/* =========================
-   FOOTER
-========================= */
-.footer {
-  text-align: center;
-  font-size: 13px;
-  color: #8a8a8a;
-  padding: 40px 0 28px;
+/* ================================
+   INNER PAGES ONLY
+   (THIS IS THE KEY FIX)
+================================ */
+.inner-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
+.inner-page h1 {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
 
-  h1 {
-    font-size: 32px;
-  }
+.inner-page p {
+  max-width: 760px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #b9c2cf;
+}
+
+.inner-section {
+  margin-top: 36px;
+}
+
+.inner-note {
+  margin-top: 18px;
+  max-width: 640px;
+  font-size: 14px;
+  color: #aab3c0;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 32px 0;
+  font-size: 13px;
+  color: #8e97a5;
 }
