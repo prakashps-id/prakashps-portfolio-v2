@@ -1,7 +1,4 @@
-/* =========================
-   BASE RESET
-========================= */
-
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -15,20 +12,14 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   CONTAINER (DO NOT BREAK)
-========================= */
-
+/* ===== CONTAINER ===== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 24px;
 }
 
-/* =========================
-   NAVIGATION (SAFE FIX)
-========================= */
-
+/* ===== NAV ===== */
 nav.container {
   display: flex;
   justify-content: center;
@@ -40,14 +31,13 @@ nav.container {
 nav.container a {
   font-size: 16px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   position: relative;
   padding-bottom: 6px;
   transition: color 150ms ease;
 }
 
-/* subtle underline */
 nav.container a::after {
   content: "";
   position: absolute;
@@ -55,27 +45,21 @@ nav.container a::after {
   bottom: 0;
   height: 1px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255,255,255,0.6);
   opacity: 0;
   transition: opacity 150ms ease;
 }
 
 nav.container a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
-nav.container a:hover::after {
-  opacity: 1;
-}
-
+nav.container a:hover::after,
 nav.container a.active::after {
   opacity: 1;
 }
 
-/* =========================
-   HEADINGS
-========================= */
-
+/* ===== HEADINGS ===== */
 h1 {
   font-size: 40px;
   font-weight: 600;
@@ -85,35 +69,32 @@ h1 {
 h2 {
   font-size: 18px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255,255,255,0.7);
   margin-bottom: 20px;
 }
 
-/* =========================
-   TEXT
-========================= */
+h3 {
+  margin: 48px 0 24px;
+  font-size: 22px;
+}
 
+/* ===== TEXT ===== */
 p {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255,255,255,0.78);
   margin-bottom: 16px;
   max-width: 640px;
 }
 
-/* =========================
-   PROFILE IMAGE (CRITICAL FIX)
-========================= */
-
+/* ===== IMAGE ===== */
 img {
   max-width: 360px;
   width: 100%;
   border-radius: 18px;
+  margin: 32px 0;
 }
 
-/* =========================
-   WHAT I LEAD GRID
-========================= */
-
+/* ===== GRID ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -121,42 +102,18 @@ img {
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 14px;
-  padding: 22px 24px;
-  min-height: 92px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  padding: 22px;
   text-align: center;
   font-size: 15px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 64px 0 32px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-/* =========================
-   RESPONSIVE (SAFE)
-========================= */
-
-@media (max-width: 900px) {
-  nav.container {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  img {
-    max-width: 280px;
-  }
+  color: rgba(255,255,255,0.6);
 }
