@@ -1,141 +1,177 @@
 /* =========================
    RESET & BASE
 ========================= */
+
 * {
   box-sizing: border-box;
-}
-
-html, body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at top left, #0c1220, #05070d 70%);
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, #0e1320, #05070c 70%);
   color: #eaeaea;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================
+   GLOBAL CONTAINER
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* =========================
    NAVIGATION
 ========================= */
+
 nav {
-  max-width: 1200px;
-  margin: 24px auto 0;
-  padding: 0 24px;
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  gap: 28px;
+
+  padding: 24px 0;
 }
 
 nav a {
-  color: #cfd6ff;
+  color: #cfcfcf;
   text-decoration: none;
   font-size: 14px;
 }
 
 nav a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   HOME CONTAINER
-========================= */
-.home-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 56px 24px 24px;
+  color: #ffffff;
 }
 
 /* =========================
    HOME HERO
 ========================= */
+
 .home-hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 56px;
-  align-items: start;
+  gap: 64px;
+  align-items: center;
+
+  margin-top: 32px;
 }
 
 .home-hero h1 {
-  font-size: 40px;
-  margin-bottom: 6px;
+  font-size: 42px;
+  margin-bottom: 8px;
 }
 
-.home-hero h2 {
+.subtitle {
   font-size: 16px;
-  font-weight: 500;
-  color: #b8c0ff;
+  color: #bdbdbd;
   margin-bottom: 20px;
 }
 
 .home-hero p {
   font-size: 15px;
-  line-height: 1.6;
-  color: #cfd3e6;
-  max-width: 640px;
+  color: #cfcfcf;
   margin-bottom: 16px;
 }
 
-.home-photo {
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-wrapper img {
   width: 100%;
   max-width: 360px;
   border-radius: 18px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  justify-self: end;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 /* =========================
    WHAT I LEAD
 ========================= */
+
 .what-i-lead {
   margin-top: 72px;
 }
 
 .what-i-lead h2 {
-  font-size: 26px;
+  font-size: 22px;
   margin-bottom: 24px;
 }
 
-.lead-grid {
+/* GRID */
+
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
 }
 
-.lead-card {
-  padding: 22px 24px;
-  min-height: 96px;
+/* CARDS */
 
+.card {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  text-align: center;
+  padding: 24px 28px;
+  min-height: 96px;
+
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+
   font-size: 15px;
   line-height: 1.45;
+  text-align: center;
+}
 
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 14px;
+/* =========================
+   GENERIC SECTIONS
+========================= */
+
+.section {
+  margin-top: 64px;
+}
+
+.section h1,
+.section h2 {
+  margin-bottom: 16px;
+}
+
+.section p {
+  max-width: 900px;
+  color: #cfcfcf;
 }
 
 /* =========================
    FOOTER
 ========================= */
+
 footer {
   text-align: center;
+  margin: 80px 0 32px;
   font-size: 13px;
-  color: #9aa2c7;
-  padding: 48px 0 32px;
+  color: #9a9a9a;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
+
 @media (max-width: 900px) {
   .home-hero {
     grid-template-columns: 1fr;
   }
 
-  .home-photo {
-    justify-self: start;
+  .profile-wrapper {
     margin-top: 32px;
   }
 }
