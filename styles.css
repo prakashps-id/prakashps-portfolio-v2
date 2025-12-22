@@ -124,8 +124,8 @@ body {
   align-items: center;
   justify-content: center;
 
-  padding: 24px 28px;
-  min-height: 96px;
+  padding: 26px 28px;
+  min-height: 110px;
 
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -135,7 +135,7 @@ body {
   line-height: 1.45;
   text-align: center;
 
-  color: #eaeaea
+  color: #eaeaea;
 }
 
 /* FOOTER */
@@ -158,5 +158,6 @@ body {
     height: 340px;
   }
 }
+
 
 
