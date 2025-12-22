@@ -1,6 +1,6 @@
-/* ================================
+/* =========================
    BASE RESET
-   ================================ */
+========================= */
 
 * {
   margin: 0;
@@ -9,15 +9,15 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background: radial-gradient(circle at top left, #0b1220, #04070d);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top left, #0b1220, #05070d);
   color: #eaeaea;
   line-height: 1.6;
 }
 
-/* ================================
-   GLOBAL CONTAINER
-   ================================ */
+/* =========================
+   CONTAINER (DO NOT BREAK)
+========================= */
 
 .container {
   max-width: 1200px;
@@ -25,38 +25,37 @@ body {
   padding: 32px 24px;
 }
 
-/* ================================
-   NAVIGATION (FINAL – STABLE)
-   ================================ */
+/* =========================
+   NAVIGATION (SAFE FIX)
+========================= */
 
 nav.container {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 28px;
   padding-top: 24px;
   padding-bottom: 48px;
 }
 
 nav.container a {
-  position: relative;
   font-size: 16px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  letter-spacing: 0.2px;
+  position: relative;
   padding-bottom: 6px;
   transition: color 150ms ease;
 }
 
-/* Hover underline */
+/* subtle underline */
 nav.container a::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
   opacity: 0;
   transition: opacity 150ms ease;
 }
@@ -69,81 +68,57 @@ nav.container a:hover::after {
   opacity: 1;
 }
 
-/* Active page */
-nav.container a.active {
-  color: #ffffff;
-}
-
 nav.container a.active::after {
   opacity: 1;
 }
 
-/* ================================
-   HERO SECTION
-   ================================ */
+/* =========================
+   HEADINGS
+========================= */
 
-.hero {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 64px;
-  align-items: center;
-  padding-bottom: 72px;
-}
-
-.hero h1 {
+h1 {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-.hero h2 {
+h2 {
   font-size: 18px;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
 }
 
-.hero p {
+/* =========================
+   TEXT
+========================= */
+
+p {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.78);
   margin-bottom: 16px;
-  max-width: 620px;
+  max-width: 640px;
 }
 
-.hero img {
-  width: 100%;
+/* =========================
+   PROFILE IMAGE (CRITICAL FIX)
+========================= */
+
+img {
   max-width: 360px;
+  width: 100%;
   border-radius: 18px;
-  justify-self: end;
 }
 
-/* ================================
-   SECTION HEADERS
-   ================================ */
-
-.section {
-  padding-top: 64px;
-}
-
-.section h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 28px;
-}
-
-/* ================================
-   GRID (USED EVERYWHERE)
-   ================================ */
+/* =========================
+   WHAT I LEAD GRID
+========================= */
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
-
-/* ================================
-   CARDS (WHAT I LEAD / CASES)
-   ================================ */
 
 .card {
   background: rgba(255, 255, 255, 0.03);
@@ -158,13 +133,11 @@ nav.container a.active::after {
 
   text-align: center;
   font-size: 15px;
-  line-height: 1.45;
-  color: #eaeaea;
 }
 
-/* ================================
+/* =========================
    FOOTER
-   ================================ */
+========================= */
 
 footer {
   text-align: center;
@@ -173,22 +146,17 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ================================
-   RESPONSIVE
-   ================================ */
+/* =========================
+   RESPONSIVE (SAFE)
+========================= */
 
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero img {
-    justify-self: start;
-  }
-
   nav.container {
     flex-wrap: wrap;
     gap: 20px;
+  }
+
+  img {
+    max-width: 280px;
   }
 }
