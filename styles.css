@@ -1,140 +1,141 @@
-/* ================================
-   BASE RESET
-================================ */
+/* =========================
+   RESET & BASE
+========================= */
 * {
   box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  background: radial-gradient(circle at top, #0b1220 0%, #05070d 60%);
+  background: radial-gradient(circle at top left, #0c1220, #05070d 70%);
   color: #eaeaea;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
-/* ================================
-   NAVIGATION (GLOBAL)
-================================ */
-nav.container {
+/* =========================
+   NAVIGATION
+========================= */
+nav {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 24px;
+  margin: 24px auto 0;
+  padding: 0 24px;
   display: flex;
-  gap: 22px;
+  gap: 24px;
 }
 
-nav.container a {
-  color: #cfd6e3;
+nav a {
+  color: #cfd6ff;
   text-decoration: none;
   font-size: 14px;
 }
 
-nav.container a:hover {
-  color: #ffffff;
+nav a:hover {
+  text-decoration: underline;
 }
 
-/* ================================
-   HOME PAGE (UNCHANGED)
-================================ */
-.hero {
+/* =========================
+   HOME CONTAINER
+========================= */
+.home-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 72px 24px 40px;
+  padding: 56px 24px 24px;
+}
+
+/* =========================
+   HOME HERO
+========================= */
+.home-hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
+  gap: 56px;
   align-items: start;
 }
 
-.hero h1 {
-  font-size: 44px;
-  margin-bottom: 8px;
+.home-hero h1 {
+  font-size: 40px;
+  margin-bottom: 6px;
 }
 
-.hero h2 {
+.home-hero h2 {
   font-size: 16px;
   font-weight: 500;
-  color: #b8c0cf;
+  color: #b8c0ff;
   margin-bottom: 20px;
 }
 
-.hero p {
+.home-hero p {
   font-size: 15px;
   line-height: 1.6;
-  color: #b9c2cf;
-  margin-bottom: 14px;
+  color: #cfd3e6;
+  max-width: 640px;
+  margin-bottom: 16px;
 }
 
-.hero img {
+.home-photo {
   width: 100%;
   max-width: 360px;
-  border-radius: 16px;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  justify-self: end;
 }
 
-/* ================================
-   GRID + CARD (REUSABLE)
-================================ */
-.grid {
+/* =========================
+   WHAT I LEAD
+========================= */
+.what-i-lead {
+  margin-top: 72px;
+}
+
+.what-i-lead h2 {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.lead-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
-.card {
+.lead-card {
+  padding: 22px 24px;
+  min-height: 96px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 28px;
-  min-height: 96px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
+
+  text-align: center;
   font-size: 15px;
   line-height: 1.45;
-  text-align: center;
-  color: #eaeaea;
+
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
 }
 
-/* ================================
-   INNER PAGES ONLY
-   (THIS IS THE KEY FIX)
-================================ */
-.inner-page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 64px 24px 96px;
-}
-
-.inner-page h1 {
-  font-size: 36px;
-  margin-bottom: 12px;
-}
-
-.inner-page p {
-  max-width: 760px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #b9c2cf;
-}
-
-.inner-section {
-  margin-top: 36px;
-}
-
-.inner-note {
-  margin-top: 18px;
-  max-width: 640px;
-  font-size: 14px;
-  color: #aab3c0;
-}
-
-/* ================================
+/* =========================
    FOOTER
-================================ */
+========================= */
 footer {
   text-align: center;
-  padding: 32px 0;
   font-size: 13px;
-  color: #8e97a5;
+  color: #9aa2c7;
+  padding: 48px 0 32px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .home-photo {
+    justify-self: start;
+    margin-top: 32px;
+  }
 }
