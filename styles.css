@@ -1,119 +1,125 @@
-/* ===== RESET ===== */
+/* RESET */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  background: radial-gradient(circle at top left, #0b1220, #05070d);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, #0e1320, #05070c 70%);
   color: #eaeaea;
   line-height: 1.6;
 }
 
-/* ===== CONTAINER ===== */
+/* CONTAINER */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 24px;
+  padding: 0 24px;
 }
 
-/* ===== NAV ===== */
-nav.container {
+/* NAV */
+.site-nav {
+  padding: 24px 0;
+}
+
+.nav-inner {
   display: flex;
   justify-content: center;
   gap: 28px;
-  padding-top: 24px;
-  padding-bottom: 48px;
 }
 
-nav.container a {
-  font-size: 16px;
-  font-weight: 500;
-  color: rgba(255,255,255,0.85);
+.site-nav a {
+  color: #cfcfcf;
   text-decoration: none;
-  position: relative;
-  padding-bottom: 6px;
-  transition: color 150ms ease;
+  font-size: 14px;
 }
 
-nav.container a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  background: rgba(255,255,255,0.6);
-  opacity: 0;
-  transition: opacity 150ms ease;
+.site-nav a:hover {
+  color: #ffffff;
 }
 
-nav.container a:hover {
-  color: #fff;
+/* HERO */
+.home-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 64px;
+  align-items: center;
+  margin-top: 40px;
 }
 
-nav.container a:hover::after,
-nav.container a.active::after {
-  opacity: 1;
-}
-
-/* ===== HEADINGS ===== */
-h1 {
-  font-size: 40px;
-  font-weight: 600;
+.hero-text h1 {
+  font-size: 42px;
   margin-bottom: 8px;
 }
 
-h2 {
-  font-size: 18px;
-  font-weight: 500;
-  color: rgba(255,255,255,0.7);
+.subtitle {
+  font-size: 16px;
+  color: #bdbdbd;
   margin-bottom: 20px;
 }
 
-h3 {
-  margin: 48px 0 24px;
-  font-size: 22px;
-}
-
-/* ===== TEXT ===== */
-p {
+.hero-text p {
   font-size: 15px;
-  color: rgba(255,255,255,0.78);
+  color: #cfcfcf;
   margin-bottom: 16px;
-  max-width: 640px;
 }
 
-/* ===== IMAGE ===== */
-img {
+/* IMAGE */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
   max-width: 360px;
   width: 100%;
   border-radius: 18px;
-  margin: 32px 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
 }
 
-/* ===== GRID ===== */
+/* WHAT I LEAD */
+.what-i-lead {
+  margin-top: 72px;
+}
+
+.what-i-lead h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .card {
-  background: rgba(255,255,255,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 28px;
+  min-height: 96px;
+  background: rgba(255,255,255,0.02);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 14px;
-  padding: 22px;
   text-align: center;
   font-size: 15px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 64px 0 32px;
-  font-size: 14px;
-  color: rgba(255,255,255,0.6);
+  margin: 80px 0 32px;
+  font-size: 13px;
+  color: #9a9a9a;
 }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
