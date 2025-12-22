@@ -1,131 +1,117 @@
-:root {
-  --bg: #020617;
-  --text: #e5e7eb;
-  --muted: #9aa4b2;
-  --border: #1e293b;
-}
-
+/* =========================
+   GLOBAL RESET
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #020617, #000);
-  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Inter, Helvetica, Arial, sans-serif;
+  background: radial-gradient(
+      ellipse at top left,
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    ),
+    #05070c;
+  color: #eaeaea;
   line-height: 1.6;
 }
 
-/* NAV */
-.nav-wrap {
-  padding: 18px 0;
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+/* =========================
+   NAVIGATION
+========================= */
+nav.container {
   display: flex;
   gap: 28px;
+  padding: 28px 0 40px;
 }
 
-.nav a {
-  color: var(--text);
+nav.container a {
+  color: #eaeaea;
   text-decoration: none;
-  font-weight: 500;
-  opacity: 0.85;
+  font-size: 15px;
+  opacity: 0.9;
 }
 
-.nav a:hover {
+nav.container a:hover {
   opacity: 1;
+  text-decoration: underline;
 }
 
-/* HERO */
-.hero-wrap {
-  padding: 48px 0 56px;
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  margin-bottom: 56px;
 }
 
-.hero {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 64px;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-text h1 {
-  font-size: 2.4rem;
-  margin-bottom: 8px;
-}
-
-.role {
+h1 {
+  font-size: 36px;
   font-weight: 600;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
   margin-bottom: 18px;
 }
 
-.hero-text p {
-  color: var(--muted);
-  margin-bottom: 14px;
+p {
+  max-width: 620px;
+  font-size: 15px;
+  color: #cfcfcf;
+  margin-bottom: 16px;
 }
 
-/* IMAGE */
-.hero-photo img {
-  width: 320px;
-  height: 400px;
-  object-fit: cover;
+/* =========================
+   HERO LAYOUT (HOME)
+========================= */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 360px;
   border-radius: 18px;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.65);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
 }
 
-/* CONTENT */
-.content {
-  max-width: 1200px;
-  margin: auto;
-  padding: 32px 20px 0;
-}
-
-.content h2 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-}
-
-/* GRID */
+/* =========================
+   GRID
+========================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
-  max-width: 1100px;
- 
-}
-@media (max-width: 1100px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
-@media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
+/* =========================
+   CARDS
+========================= */
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 26px 28px;
-  min-height: 110px;
+  padding: 24px 28px;
+  min-height: 96px;
 
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -134,30 +120,29 @@ body {
   font-size: 15px;
   line-height: 1.45;
   text-align: center;
-
   color: #eaeaea;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 .footer {
-  padding: 40px 20px 48px;
   text-align: center;
-  color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 13px;
+  color: #8a8a8a;
+  padding: 40px 0 28px;
 }
 
-/* RESPONSIVE (ONLY ONE RULE) */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .hero {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .hero-photo img {
-    width: 260px;
-    height: 340px;
+  h1 {
+    font-size: 32px;
   }
 }
-
-
-
