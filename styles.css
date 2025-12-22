@@ -1,7 +1,4 @@
-/* =========================
-   RESET & BASE
-========================= */
-
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,25 +12,18 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   GLOBAL CONTAINER
-========================= */
-
+/* CONTAINER */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
-
+/* NAV */
 nav {
   display: flex;
   justify-content: center;
   gap: 28px;
-
   padding: 24px 0;
 }
 
@@ -47,20 +37,16 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* =========================
-   HOME HERO
-========================= */
-
+/* HERO */
 .home-hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 64px;
   align-items: center;
-
   margin-top: 32px;
 }
 
-.home-hero h1 {
+h1 {
   font-size: 42px;
   margin-bottom: 8px;
 }
@@ -71,32 +57,26 @@ nav a:hover {
   margin-bottom: 20px;
 }
 
-.home-hero p {
+p {
   font-size: 15px;
   color: #cfcfcf;
   margin-bottom: 16px;
 }
 
-/* =========================
-   PROFILE IMAGE
-========================= */
-
+/* IMAGE */
 .profile-wrapper {
   display: flex;
   justify-content: center;
 }
 
 .profile-wrapper img {
-  width: 100%;
   max-width: 360px;
+  width: 100%;
   border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45);
 }
 
-/* =========================
-   WHAT I LEAD
-========================= */
-
+/* WHAT I LEAD */
 .what-i-lead {
   margin-top: 72px;
 }
@@ -106,55 +86,26 @@ nav a:hover {
   margin-bottom: 24px;
 }
 
-/* GRID */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
 
-/* CARDS */
-
 .card {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 24px 28px;
   min-height: 96px;
-
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 14px;
-
-  font-size: 15px;
-  line-height: 1.45;
   text-align: center;
+  font-size: 15px;
 }
 
-/* =========================
-   GENERIC SECTIONS
-========================= */
-
-.section {
-  margin-top: 64px;
-}
-
-.section h1,
-.section h2 {
-  margin-bottom: 16px;
-}
-
-.section p {
-  max-width: 900px;
-  color: #cfcfcf;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer {
   text-align: center;
   margin: 80px 0 32px;
@@ -162,16 +113,9 @@ footer {
   color: #9a9a9a;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .home-hero {
     grid-template-columns: 1fr;
-  }
-
-  .profile-wrapper {
-    margin-top: 32px;
   }
 }
