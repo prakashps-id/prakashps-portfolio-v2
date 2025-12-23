@@ -20,7 +20,16 @@ body {
 }
 
 /* ================================
-   FIXED NAV — GRID ANCHORED (FINAL)
+   CONTAINER
+================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ================================
+   FIXED NAV (LEFT ALIGNED)
 ================================ */
 .site-nav {
   position: fixed;
@@ -39,7 +48,7 @@ body {
 
 .nav-inner {
   display: flex;
-  justify-content: center; /* CENTERED INSIDE FIXED GRID */
+  justify-content: flex-start;
   gap: 28px;
 }
 
@@ -81,16 +90,7 @@ body {
 }
 
 /* ================================
-   CONTAINER
-================================ */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ================================
-   HOME
+   HOME HERO
 ================================ */
 .home-hero {
   display: grid;
@@ -130,7 +130,7 @@ body {
 }
 
 /* ================================
-   SECTIONS
+   SECTIONS / CARDS
 ================================ */
 .section {
   margin-top: 72px;
