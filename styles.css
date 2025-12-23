@@ -1,4 +1,11 @@
 /* ================================
+   FORCE CONSISTENT VIEWPORT
+================================ */
+html {
+  overflow-y: scroll; /* ALWAYS reserve scrollbar space */
+}
+
+/* ================================
    RESET
 ================================ */
 * {
@@ -19,9 +26,6 @@ body {
 
   /* space for fixed nav */
   padding-top: 96px;
-
-  /* scrollbar compensation (set via JS) */
-  padding-right: var(--scrollbar-width, 0px);
 }
 
 /* ================================
@@ -34,7 +38,7 @@ body {
 }
 
 /* ================================
-   FIXED NAV (LEFT-ALIGNED)
+   FIXED NAV (LEFT ALIGNED)
 ================================ */
 .site-nav {
   position: fixed;
@@ -181,16 +185,6 @@ body {
   max-width: 820px;
   color: #cfcfcf;
   margin-bottom: 32px;
-}
-
-.inner-section {
-  margin-top: 32px;
-}
-
-.inner-note {
-  margin-top: 28px;
-  color: #bdbdbd;
-  font-size: 15px;
 }
 
 /* ================================
