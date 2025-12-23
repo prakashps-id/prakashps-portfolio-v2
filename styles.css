@@ -16,7 +16,12 @@ body {
   color: #eaeaea;
   line-height: 1.6;
   font-size: 17px;
-  padding-top: 96px; /* space for fixed nav */
+
+  /* space for fixed nav */
+  padding-top: 96px;
+
+  /* scrollbar compensation (set via JS) */
+  padding-right: var(--scrollbar-width, 0px);
 }
 
 /* ================================
@@ -29,7 +34,7 @@ body {
 }
 
 /* ================================
-   FIXED NAV (LEFT ALIGNED)
+   FIXED NAV (LEFT-ALIGNED)
 ================================ */
 .site-nav {
   position: fixed;
