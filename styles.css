@@ -1,6 +1,12 @@
 /* ================================
    RESET
 ================================ */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,9 +20,8 @@ body {
   line-height: 1.6;
   font-size: 17px;
 
-  /* NAV STABILITY FIX */
-  overflow-y: auto;
-  scrollbar-gutter: stable;
+  min-height: 100vh;
+  overflow-y: scroll;
 }
 
 /* ================================
@@ -201,5 +206,6 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
 
 
