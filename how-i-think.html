@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>How I Think | Prakash P S</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
@@ -22,13 +22,21 @@
 
 <main class="container inner-page">
   <h1>How I Think</h1>
-  <p>
-    My approach to learning design balances instructional rigor with business
-    constraints, stakeholder needs, and long-term scalability.
-  </p>
+  <p>My approach balances instructional rigor, business constraints, and long-term scalability.</p>
 </main>
 
 <footer>© 2026 Prakash P S</footer>
+
+<script>
+  (function () {
+    function setScrollbarWidth() {
+      const width = window.innerWidth - document.documentElement.clientWidth;
+      document.documentElement.style.setProperty('--scrollbar-width', width + 'px');
+    }
+    setScrollbarWidth();
+    window.addEventListener('resize', setScrollbarWidth);
+  })();
+</script>
 
 </body>
 </html>
