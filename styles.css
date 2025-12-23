@@ -279,3 +279,38 @@ footer {
   }
 }
 
+/* ================================
+   MOBILE NAV FIX (FINAL)
+================================ */
+@media (max-width: 640px) {
+
+  /* Lock nav height */
+  .site-nav {
+    padding: 16px 0;
+  }
+
+  /* Make nav single-line + scrollable */
+  .nav-inner {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevent links from wrapping */
+  .site-nav a {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+
+  /* Hide ugly scrollbar but keep scroll */
+  .nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Critical: ensure content clears nav */
+  body {
+    padding-top: 96px; /* must be >= nav height */
+  }
+}
+
