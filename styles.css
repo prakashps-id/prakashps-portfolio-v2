@@ -280,37 +280,30 @@ footer {
 }
 
 /* ================================
-   MOBILE NAV FIX (FINAL)
+   MOBILE NAV – FINAL SIMPLE FIX
 ================================ */
 @media (max-width: 640px) {
 
-  /* Lock nav height */
-  .site-nav {
-    padding: 16px 0;
-  }
-
-  /* Make nav single-line + scrollable */
+  /* Nav layout */
   .nav-inner {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 12px;
   }
 
-  /* Prevent links from wrapping */
+  /* Each link */
   .site-nav a {
-    white-space: nowrap;
-    font-size: 15px;
+    font-size: 14px;
+    padding-bottom: 4px;
   }
 
-  /* Hide ugly scrollbar but keep scroll */
-  .nav-inner::-webkit-scrollbar {
-    display: none;
+  /* Make nav height predictable */
+  .site-nav {
+    padding: 16px 0 20px;
   }
 
-  /* Critical: ensure content clears nav */
+  /* Ensure content clears nav */
   body {
-    padding-top: 96px; /* must be >= nav height */
+    padding-top: 120px;
   }
 }
-
