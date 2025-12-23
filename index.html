@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Prakash P S | Learning Experience Consultant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
@@ -21,24 +21,13 @@
 </nav>
 
 <main class="container">
-
   <section class="home-hero">
     <div class="hero-text">
       <h1>Prakash P S</h1>
       <div class="subtitle">Learning Experience Consultant</div>
-
-      <p>
-        I work at the intersection of learning strategy, instructional judgment,
-        and measurable business outcomes. My focus is on designing learning
-        solutions that perform in real-world enterprise conditions.
-      </p>
-
-      <p>
-        With over 13 years of experience across enterprise environments, I lead
-        learning decisions from problem framing through execution.
-      </p>
+      <p>I work at the intersection of learning strategy, instructional judgment, and measurable business outcomes.</p>
+      <p>With over 13 years of experience, I lead learning decisions from problem framing through execution.</p>
     </div>
-
     <div class="hero-image">
       <img src="profile.jpeg" alt="Prakash P S">
     </div>
@@ -54,10 +43,20 @@
       <div class="card">Responsible AI in learning</div>
     </div>
   </section>
-
 </main>
 
 <footer>© 2026 Prakash P S</footer>
+
+<script>
+  (function () {
+    function setScrollbarWidth() {
+      const width = window.innerWidth - document.documentElement.clientWidth;
+      document.documentElement.style.setProperty('--scrollbar-width', width + 'px');
+    }
+    setScrollbarWidth();
+    window.addEventListener('resize', setScrollbarWidth);
+  })();
+</script>
 
 </body>
 </html>
