@@ -10,6 +10,7 @@ body {
   background: radial-gradient(circle at top, #0e1320, #05070c 70%);
   color: #eaeaea;
   line-height: 1.6;
+  font-size: 17px;
 }
 
 /* CONTAINER */
@@ -179,4 +180,5 @@ nav a.active::after {
   opacity: 1;
   transform: scaleX(1);
 }
+
 
